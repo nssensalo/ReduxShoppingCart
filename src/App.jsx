@@ -1,23 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+// import { Provider } from 'react-redux';
+// import { store } from './app/store';
+import Header from './components/Header';
+// import ProductList from './components/ProductList';
+// import ShoppingCart from './components/ShoppingCart';
+// import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline'; // Helps normalize CSS across browsers
+
+
 
 function App() {
   
 
   return (
     <>
-      <div>
-        
-          <div className="card">
-              <h1>Redux Shopping Cart</h1>
-          </div>
-        
-      </div>
+    
+      
+         <Header />
+
+
+      
       
     </>
   )
 }
 
-export default App
+export default App;
