@@ -14,16 +14,16 @@ export default function Header () {
     return (
         <AppBar position="static" sx={{backgroundColor:'#2196F3'}}>
             <Toolbar>
-                <Typography variant="h6" component="div" sx={{flexGrow:1}}>
-                
-                    Redux Shopping Cart
-                
-                </Typography>
-                <IconButton color="inherit" aria-label="shopping cart">
-                    <Badge badgeContent={totalItemsInCart} color="error">
-                        <ShoppingCartIcon/>
-                    </Badge>
-                </IconButton>
+                        <Typography variant="h6" component="div" sx={{flexGrow:1}}>
+                        
+                            Redux Shopping Cart
+                        
+                        </Typography>
+                        <IconButton color="inherit" aria-label="shopping cart">
+                            <Badge badgeContent={totalItemsInCart} color="error">
+                                <ShoppingCartIcon/>
+                            </Badge>
+                        </IconButton>
            </Toolbar>
         </AppBar>
     );

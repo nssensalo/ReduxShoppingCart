@@ -4,7 +4,7 @@ export const selectCartItems =(state)=>state.cart.items // Input Selector: Gets 
 export const selectTotalPrice = (state) => state.cart.totalPrice // Input Selector: Gets the 'totalPrice' from the cart state
 export const selectTotalCartQuantity = createSelector(
     [selectCartItems],
-    // Result Function (This function runs when input selectors' results change)
+    
     (items) => items.reduce((totalQuantity, item) => totalQuantity + item.quantity, 0)
     //        ^------ 'items' here is the output of selectCartItems
     //                                  ^----------- 'totalQuantity' comes from the .reduce() method
