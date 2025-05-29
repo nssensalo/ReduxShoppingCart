@@ -54,7 +54,7 @@ const cartSlice = createSlice({
             state.totalPrice = 0 //dont need to deal with zeroing out quantity on cleared cart
         },
         setItemQuantity: (state, action) => {
-            const {id,newQuantity,name,price} = action.payload
+            const {id,newQuantity,name,price} = action.payload//newQuantity is not an object,just data
             const existingItem = state.items.find(item=> item.id ===id)
             if (existingItem) {
                 if(newQuantity > 0) {
@@ -70,7 +70,8 @@ const cartSlice = createSlice({
             // This handles cases where user input might be non-numeric or negative.
             //const parsedNewQuantity = Math.max(0, Number(newQuantity) || 0);
         }
-    }
+    },
+    
         
 
 });
