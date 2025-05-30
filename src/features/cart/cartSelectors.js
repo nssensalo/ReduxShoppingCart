@@ -6,6 +6,7 @@ export const selectTotalCartQuantity = createSelector(
     [selectCartItems],
     
     (items) => items.reduce((totalQuantity, item) => totalQuantity + item.quantity, 0)
+);
     //        ^------ 'items' here is the output of selectCartItems
     //                                  ^----------- 'totalQuantity' comes from the .reduce() method
     //     Flow of reduce for selectTotalCartQuantity:
@@ -16,5 +17,8 @@ export const selectTotalCartQuantity = createSelector(
     // ... and so on ...
     // End: After iterating through all items, reduce returns the final totalQuantity.
     // So, totalQuantity is a temporary variable that reduce uses to build up the final sum, starting from the initial value of 0.
+export const selectCartItemById = (id) => createSelector(
+    [selectCartItems],
+    (items) => items.find(item => item.id ===id)
 );
 
