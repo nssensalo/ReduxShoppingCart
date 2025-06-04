@@ -1,3 +1,5 @@
+![mainpage]('pics/shoppingcartfinalmainpage.png')
+
 # Re-Cart
 
 An interactive shopping with state tracking using Redux Toolkit.
