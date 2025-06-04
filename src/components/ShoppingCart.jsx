@@ -12,11 +12,13 @@ import Divider from '@mui/material/Divider';
 export default function ShoppingCart () {
     const cartItems = useSelector(selectCartItems)
     const totalPrice = useSelector(selectTotalPrice)
+    console.log('# 1 -Total price in shopping cart:', totalPrice, typeof totalPrice)
 
     const dispatch = useDispatch()
     const handleClearCart = () =>{
         dispatch(clearCart())
     };
+    console.log('# 2 -Total price in shopping cart:', totalPrice, typeof totalPrice)
 
     return (
         <Paper  elevation={3} sx={{ p: 3, m: 3, maxWidth: 400, mx: 'auto' }}>
@@ -34,8 +36,32 @@ export default function ShoppingCart () {
                     {cartItems.map((item)=>(
                     <CartItem key={item.id} item={item}/>
                     ))}
-
-
+                    <Divider sx={{ my: 2 }} />
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <Typography variant='h6'> Total: </Typography>
+                        <Typography variant='h6'>${totalPrice.toFixed(2)}</Typography>
+                    </Box>
+                    <Button
+                    variant='outlines'
+                    color='secondary'
+                    onClick={handleClearCart}
+                    fullWidth
+                    sx={{ mt:2 }}
+                    >
+                    Clear Cart
+                    </Button>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 </Box> 
             )}
 

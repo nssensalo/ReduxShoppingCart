@@ -20,8 +20,10 @@ export default function ProductCard ({product}) {
 
             }
 
-        ))
-    }
+        )) 
+    } 
+        
+
     return (
         <Card sx={{ maxWidth:300,m:2, display:'flex',flexDirection:'column', justifyContent:'space-between'}}>
             <CardMedia 

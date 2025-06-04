@@ -57,7 +57,7 @@ export default function CartItem({item}) {
             variant="outlined"
             sx={{ mx: 1 }}
             />
-            <IconButton size="small" onclick={handleIncrementQuantity}>
+            <IconButton size="small" onClick={handleIncrementQuantity}>
                 <AddIcon />
             </IconButton>
         </Box>

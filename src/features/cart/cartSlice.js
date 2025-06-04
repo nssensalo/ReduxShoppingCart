@@ -11,6 +11,8 @@ const cartSlice = createSlice({
     reducers: {
         addToCart:(state, action) => {
             const { id, name, price, quantity} = action.payload; //properties on items[] objects
+            
+
             const existingItem = state.items.find(item => item.id === id); 
             //iterated over existing items object for one who's id matches 
             //state.items is my current array of items in the cart and their payload properties
@@ -20,8 +22,23 @@ const cartSlice = createSlice({
             } else {
                 state.items.push({id,name, price, quantity})
             }
-            state.totalPrice = state.items.reduce((total,item)=>total + item.price * state.quantity,0)
+
+           
+
+            state.totalPrice = state.items.reduce((total,item) => total + item.price * item.quantity, 0);
+               
+            //    console.log('price:', item.price, typeof item.price)
+            //    console.log('quantity:', item.quantity, typeof item.quantity)
+            //    console.log('totalPrice:', state.totalPrice, 'type of totalPrice:', typeof state.totalPrice)
+            //    const subtotal = item.price * item.quantity 
+            //    console.log('price x quantity:', item.price * item.quantity , typeof subtotal)
+               //const subTotal = item.price * item.quantity
+               //console.log('Grand total:', subTotal + total)
+               
+               
+         console.log('After Reduce:', state.totalPrice, typeof state.totalPrice);
         },
+
         removeFromCart: (state, action) => {
             const {id} = action.payload;
            state.items =  state.items.filter(item => item !== id)

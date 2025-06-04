@@ -12,17 +12,17 @@ export default function ProductList(){
                 Available Products
             </Typography>
             <Grid container spacing={2} justifyContent="center">
-                    {
-                    dummyProducts.map(
-                        (product) =>(
-                        <Grid item key={product.id}>
-                            
-                            <ProductCard product={product} />
+                        {
+                            dummyProducts.map(
+                                (product) =>(
+                                <Grid item key={product.id}>
+                                    
+                                    <ProductCard product={product} />
 
-                        </Grid>
-                        )
-                      )
-                    }
+                                </Grid>
+                                )
+                            )
+                        }
             </Grid>
         </Box>
     );
