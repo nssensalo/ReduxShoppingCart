@@ -33,35 +33,35 @@ export default function ShoppingCart () {
             </Typography>
             ) : (
                 <Box>
-                    {cartItems.map((item)=>(
-                    <CartItem key={item.id} item={item}/>
-                    ))}
-                    <Divider sx={{ my: 2 }} />
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Typography variant='h6'> Total: </Typography>
-                        <Typography variant='h6'>${totalPrice.toFixed(2)}</Typography>
-                    </Box>
-                    <Button
-                    variant='outlines'
-                    color='secondary'
-                    onClick={handleClearCart}
-                    fullWidth
-                    sx={{ mt:2 }}
-                    >
-                    Clear Cart
-                    </Button>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                        {cartItems.map((item)=>(
+                        <CartItem key={item.id} item={item}/>
+                        ))}
+                        
+                        <Divider sx={{ my: 2 }} />
+                        
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Typography variant='h6'> Total: </Typography>
+                            <Typography variant='h6'>${totalPrice.toFixed(2)}</Typography>
+                        </Box>
+                        
+                        <Button
+                        variant='outlines'
+                        color='secondary'
+                        onClick={handleClearCart}
+                        fullWidth
+                        sx={{ mt:2 }}
+                        >
+                        Clear Cart
+                        </Button>
+                        
+                        <Button
+                        variant='contained'
+                        color='primary'
+                        fullWidth
+                        sx={{ mt: 1}}
+                        >
+                        Checkout
+                        </Button>
                 </Box> 
             )}
 

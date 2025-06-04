@@ -28,12 +28,17 @@ export default function ProductCard ({product}) {
         <Card sx={{ maxWidth:300,m:2, display:'flex',flexDirection:'column', justifyContent:'space-between'}}>
             <CardMedia 
             component="img"
-            height="140"
+            sx={{
+                height: 140,
+                objectFit: 'contain'
+                
+            }}
+            
             image={product.imageUrl}
             alt={product.name}
             />
             <CardContent >
-                    <Typography gutterBottom variant="h6" component="div">
+                    <Typography gutterBottom variant="h6" sx={{whiteSpace:'pre',overflow: 'visible',msTextOverflow:'ellipsis'}} component="div">
                         {product.name}
                     </Typography>
                     <Typography variant="body1" color="text.secondary">
